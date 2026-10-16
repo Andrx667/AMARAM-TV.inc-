@@ -111,45 +111,155 @@
             transform: translateY(-2px);
         }
 
+        /* Secciones Generales */
+        .section-padding {
+            padding: 5rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: var(--dark);
+            text-align: center;
+        }
+
         /* Hero Section */
         .hero {
-            background: linear-gradient(rgba(30, 41, 59, 0.9), rgba(30, 41, 59, 0.9)), url('https://images.unsplash.com/photo-1621905251189-08b45d6a269e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover;
+            background: linear-gradient(135deg, rgba(30, 41, 59, 0.95), rgba(2, 132, 199, 0.85));
             color: white;
-            padding: 6rem 2rem;
+            padding: 7rem 2rem;
             text-align: center;
         }
 
         .hero h1 {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-            max-width: 800px;
+            font-size: 3.2rem;
+            margin-bottom: 1.5rem;
+            max-width: 900px;
             margin-left: auto;
             margin-right: auto;
+            line-height: 1.2;
         }
 
         .hero p {
             font-size: 1.2rem;
-            color: #cbd5e1;
-            margin-bottom: 2rem;
-            max-width: 600px;
+            color: #e2e8f0;
+            margin-bottom: 2.5rem;
+            max-width: 650px;
             margin-left: auto;
             margin-right: auto;
         }
 
-        /* Planes de Suscripción */
-        .planes-section {
-            padding: 5rem 2rem;
-            max-width: 1200px;
-            margin: 0 auto;
-            text-align: center;
+        /* Descripción del Programa */
+        .desc-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
         }
 
-        .planes-section h2 {
-            font-size: 2.5rem;
-            margin-bottom: 3rem;
+        .desc-text p {
+            font-size: 1.1rem;
+            color: var(--gray);
+            margin-bottom: 1.5rem;
+        }
+
+        .desc-features {
+            list-style: none;
+            margin-top: 2rem;
+        }
+
+        .desc-features li {
+            margin-bottom: 1rem;
+            font-weight: 600;
+            color: var(--dark);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 1.1rem;
+        }
+
+        .desc-features li::before {
+            content: "⚡";
+            color: var(--secondary);
+            font-size: 1.3rem;
+        }
+
+        .desc-visual {
+            background: linear-gradient(45deg, var(--primary), var(--dark));
+            border-radius: 12px;
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 5rem;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Estructura de Contenido */
+        .estructura-bg {
+            background-color: #f1f5f9;
+        }
+
+        .course-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2.5rem;
+        }
+
+        .course-card {
+            background: white;
+            border-radius: 12px;
+            padding: 2.5rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            border-top: 5px solid var(--primary);
+        }
+
+        .course-card h3 {
+            font-size: 1.6rem;
+            margin-bottom: 1.5rem;
             color: var(--dark);
         }
 
+        .module {
+            margin-bottom: 1.5rem;
+            background: var(--light);
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 4px solid var(--secondary);
+        }
+
+        .module h4 {
+            color: var(--dark);
+            margin-bottom: 0.8rem;
+            font-size: 1.1rem;
+        }
+
+        .module ul {
+            list-style-type: none;
+            color: var(--gray);
+            font-size: 0.95rem;
+        }
+
+        .module ul li {
+            margin-bottom: 0.5rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .module ul li::before {
+            content: "•";
+            color: var(--primary);
+            font-weight: bold;
+            font-size: 1.5rem;
+            position: absolute;
+            left: 0;
+            top: -5px;
+        }
+
+        /* Planes de Suscripción */
         .pricing-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -194,47 +304,16 @@
             border-radius: 20px;
             font-size: 0.8rem;
             font-weight: bold;
+            white-space: nowrap;
         }
 
-        .plan-name {
-            font-size: 1.5rem;
-            font-weight: 700;
-            margin-bottom: 0.5rem;
-        }
+        .plan-name { font-size: 1.5rem; font-weight: 700; margin-bottom: 0.5rem; }
+        .plan-price { font-size: 2.5rem; font-weight: 800; color: var(--primary); margin-bottom: 1.5rem; }
+        .plan-price span { font-size: 1rem; color: var(--gray); font-weight: normal; }
 
-        .plan-price {
-            font-size: 2.5rem;
-            font-weight: 800;
-            color: var(--primary);
-            margin-bottom: 1.5rem;
-        }
-
-        .plan-price span {
-            font-size: 1rem;
-            color: var(--gray);
-            font-weight: normal;
-        }
-
-        .plan-features {
-            list-style: none;
-            margin-bottom: 2rem;
-            text-align: left;
-            flex-grow: 1;
-        }
-
-        .plan-features li {
-            margin-bottom: 0.8rem;
-            color: var(--gray);
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .plan-features li::before {
-            content: "✓";
-            color: var(--secondary);
-            font-weight: bold;
-        }
+        .plan-features { list-style: none; margin-bottom: 2rem; text-align: left; flex-grow: 1; }
+        .plan-features li { margin-bottom: 0.8rem; color: var(--gray); display: flex; align-items: center; gap: 10px; }
+        .plan-features li::before { content: "✓"; color: var(--secondary); font-weight: bold; }
 
         /* Modal de Login */
         .modal-overlay {
@@ -256,72 +335,27 @@
             position: relative;
         }
 
-        .close-btn {
-            position: absolute;
-            top: 15px;
-            right: 20px;
-            font-size: 1.5rem;
-            cursor: pointer;
-            color: var(--gray);
-        }
-
-        .modal-content h3 {
-            margin-bottom: 1.5rem;
-            font-size: 1.5rem;
-            text-align: center;
-        }
-
-        .form-group {
-            margin-bottom: 1rem;
-        }
-
-        .form-group label {
-            display: block;
-            margin-bottom: 0.5rem;
-            font-size: 0.9rem;
-            font-weight: 600;
-        }
-
-        .form-group input {
-            width: 100%;
-            padding: 0.8rem;
-            border: 1px solid #cbd5e1;
-            border-radius: 6px;
-            font-size: 1rem;
-        }
-
-        .form-group input:focus {
-            outline: none;
-            border-color: var(--primary);
-        }
-
-        .btn-full {
-            width: 100%;
-            background: var(--primary);
-            color: white;
-            padding: 0.8rem;
-            font-size: 1rem;
-            margin-top: 1rem;
-        }
-
-        .btn-full:hover {
-            background: var(--primary-hover);
-        }
+        .close-btn { position: absolute; top: 15px; right: 20px; font-size: 1.5rem; cursor: pointer; color: var(--gray); }
+        .modal-content h3 { margin-bottom: 1.5rem; font-size: 1.5rem; text-align: center; }
+        
+        .form-group { margin-bottom: 1rem; }
+        .form-group label { display: block; margin-bottom: 0.5rem; font-size: 0.9rem; font-weight: 600; }
+        .form-group input { width: 100%; padding: 0.8rem; border: 1px solid #cbd5e1; border-radius: 6px; font-size: 1rem; }
+        .form-group input:focus { outline: none; border-color: var(--primary); }
+        
+        .btn-full { width: 100%; background: var(--primary); color: white; padding: 0.8rem; font-size: 1rem; margin-top: 1rem; }
+        .btn-full:hover { background: var(--primary-hover); }
 
         /* Footer */
-        footer {
-            background: var(--dark);
-            color: white;
-            text-align: center;
-            padding: 2rem;
-            margin-top: 2rem;
-        }
+        footer { background: var(--dark); color: white; text-align: center; padding: 2rem; }
 
         @media (max-width: 768px) {
             .nav-links { display: none; }
+            .hero h1 { font-size: 2.2rem; }
+            .desc-grid { grid-template-columns: 1fr; gap: 2rem; }
+            .desc-visual { height: 250px; }
             .pricing-card.premium { transform: scale(1); }
             .pricing-card.premium:hover { transform: translateY(-10px); }
-            .hero h1 { font-size: 2rem; }
         }
     </style>
 </head>
@@ -330,10 +364,11 @@
     <!-- Navegación -->
     <header>
         <nav>
-            <a href="#" class="logo">⚙️📺 AMARAM TV <span>Academy</span></a>
+            <a href="#" class="logo">⚙️ AMARAM <span>TV</span></a>
             <div class="nav-links">
                 <a href="#inicio">Inicio</a>
-                <a href="#cursos">Cursos</a>
+                <a href="#descripcion">El Programa</a>
+                <a href="#estructura">Contenido</a>
                 <a href="#planes">Planes</a>
                 <button class="btn btn-outline" onclick="openLogin()">Iniciar Sesión</button>
             </div>
@@ -342,14 +377,110 @@
 
     <!-- Sección Principal (Hero) -->
     <section class="hero" id="inicio">
-        <h1>Domina la Instalación de Aires Acondicionados y Smart TVs</h1>
-        <p>Aprende las habilidades técnicas más demandadas del mercado. Inicia tu propio negocio de servicios a domicilio con nuestros cursos prácticos.</p>
+        <h1>Transforma tu Futuro con la Instalación de Aires y Smart TVs</h1>
+        <p>Aprende en AMARAM TV las habilidades técnicas más demandadas del mercado. Olvídate de empleos mal pagados e inicia tu propio negocio de servicios a domicilio de forma rápida y profesional.</p>
         <a href="#planes" class="btn btn-solid">Ver Planes de Estudio</a>
     </section>
 
-    <!-- Sección de Planes -->
-    <section class="planes-section" id="planes">
-        <h2>Elige tu Plan de Estudio</h2>
+    <!-- Nueva Sección: Descripción del Programa -->
+    <section class="section-padding" id="descripcion">
+        <div class="desc-grid">
+            <div class="desc-text">
+                <h2 style="font-size: 2.2rem; color: var(--dark); margin-bottom: 1.5rem;">¿Qué es AMARAM TV?</h2>
+                <p>Somos tu academia técnica virtual enfocada 100% en la práctica. Hemos diseñado un modelo de enseñanza acelerado para que cualquier persona, sin importar su experiencia previa, logre dominar el arte de la instalación técnica.</p>
+                <p>Nuestra misión es transferirte el conocimiento exacto que necesitas para salir a generar ingresos inmediatos en el mundo de las instalaciones a domicilio.</p>
+                
+                <ul class="desc-features">
+                    <li>Aprende a tu propio ritmo, 24/7.</li>
+                    <li>Instructores con experiencia real en campo.</li>
+                    <li>Guías prácticas y plantillas descargables.</li>
+                    <li>Soporte y comunidad para resolver dudas.</li>
+                </ul>
+            </div>
+            <div class="desc-visual">
+                🛠️ 📺 ❄️
+            </div>
+        </div>
+    </section>
+
+    <!-- Nueva Sección: Estructura de Contenido -->
+    <section class="estructura-bg" id="estructura">
+        <div class="section-padding">
+            <h2 class="section-title">Estructura del Contenido</h2>
+            <div class="course-grid">
+                
+                <!-- Curso 1 -->
+                <div class="course-card">
+                    <h3>❄️ Curso: Instalación Profesional de Aires Mini Split</h3>
+                    
+                    <div class="module">
+                        <h4>Módulo 1: Fundamentos y Herramientas</h4>
+                        <ul>
+                            <li>Funcionamiento básico de un Mini Split.</li>
+                            <li>Herramientas esenciales del instalador.</li>
+                            <li>Medidas de seguridad y protección.</li>
+                        </ul>
+                    </div>
+
+                    <div class="module">
+                        <h4>Módulo 2: Instalación Paso a Paso</h4>
+                        <ul>
+                            <li>Elección de ubicación y desagüe.</li>
+                            <li>Fijación de la unidad interior (evaporador).</li>
+                            <li>Montaje de la unidad exterior (condensador).</li>
+                            <li>Conexión de tuberías y cableado eléctrico.</li>
+                        </ul>
+                    </div>
+
+                    <div class="module">
+                        <h4>Módulo 3: Puesta en marcha</h4>
+                        <ul>
+                            <li>Proceso de vacío con bomba.</li>
+                            <li>Revisión de fugas y gas refrigerante.</li>
+                            <li>Pruebas de encendido y entrega al cliente.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Curso 2 -->
+                <div class="course-card">
+                    <h3>📺 Curso: Montaje Estético de Smart TVs</h3>
+                    
+                    <div class="module">
+                        <h4>Módulo 1: Soportes y Superficies</h4>
+                        <ul>
+                            <li>Tipos de soportes (fijos y articulados).</li>
+                            <li>Identificación de paredes (drywall, bloque).</li>
+                            <li>Uso correcto del taladro y nivel de burbuja.</li>
+                        </ul>
+                    </div>
+
+                    <div class="module">
+                        <h4>Módulo 2: Montaje Seguro y Cableado</h4>
+                        <ul>
+                            <li>Medición y fijación del soporte a la pared.</li>
+                            <li>Anclaje seguro del televisor.</li>
+                            <li>Técnicas de gestión y ocultamiento de cables.</li>
+                        </ul>
+                    </div>
+
+                    <div class="module">
+                        <h4>Módulo 3: Configuración Inicial</h4>
+                        <ul>
+                            <li>Conexión de periféricos (consolas, decodificadores).</li>
+                            <li>Integración de teatros en casa y barras de sonido.</li>
+                            <li>Sintonización y configuración de red del TV.</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Planes (Sin cambios, solo marca) -->
+    <section class="section-padding" id="planes">
+        <h2 class="section-title">Elige tu Plan de Estudio en AMARAM TV</h2>
         <div class="pricing-grid">
             
             <!-- Plan Standard -->
@@ -405,7 +536,7 @@
     <div class="modal-overlay" id="loginModal">
         <div class="modal-content">
             <span class="close-btn" onclick="closeLogin()">&times;</span>
-            <h3>Iniciar Sesión</h3>
+            <h3>Iniciar Sesión en AMARAM TV</h3>
             <form onsubmit="handleLogin(event)">
                 <div class="form-group">
                     <label>Correo Electrónico</label>
@@ -422,7 +553,6 @@
 
     <!-- Scripts de interactividad -->
     <script>
-        // Funciones para el Modal de Login
         const modal = document.getElementById('loginModal');
 
         function openLogin() {
@@ -433,7 +563,6 @@
             modal.style.display = 'none';
         }
 
-        // Cerrar modal si hace clic afuera
         window.onclick = function(event) {
             if (event.target == modal) {
                 closeLogin();
@@ -446,15 +575,11 @@
             closeLogin();
         }
 
-        // Función para simular pagos
         function iniciarPago(plan, precio) {
-            // Formatear el precio a moneda local
             const precioFormateado = new Intl.NumberFormat('es-CO', { style: 'currency', currency: 'COP' }).format(precio);
             
-            if(confirm(`Has seleccionado el Plan ${plan} por ${precioFormateado}.\n\n¿Deseas continuar a la pasarela de pago?`)) {
+            if(confirm(`Has seleccionado el Plan ${plan} por ${precioFormateado}.\n\n¿Deseas continuar a la pasarela de pago de AMARAM TV?`)) {
                 alert('Redirigiendo a la pasarela de pagos segura... (Simulación para el sprint actual)');
-                // Aquí en el Sprint 4 conectarás la URL de la pasarela real:
-                // window.location.href = "tu-enlace-de-pago.com";
             }
         }
     </script>
